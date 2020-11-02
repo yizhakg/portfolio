@@ -274,7 +274,7 @@ font-size: 14px;
 }
 
 .openWindow:hover,.startMenu>div:hover{
-  background-color: #313944;
+  background-color: #3139447c;
   cursor: pointer;
 }
 
