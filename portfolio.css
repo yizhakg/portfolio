@@ -14,7 +14,7 @@ animation: background-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
   }
   100% {
     background-color: #06060f;
-    background-image: url(img/opening.jpg);
+    background-image: url(img/desktop.jpg);
     background-size: cover;
     background-position: center;
   }

@@ -18,6 +18,11 @@
 </style>
 
 <body>
+  <!-- opening image -->
+  <div>
+    <img src="img/opening.jpg" alt="" class="opening">
+  </div>
+  <!-- -------- -->
   <!-- <nav id="nav">
     <div>
       <ul class="navbar">
@@ -37,61 +42,69 @@
     </ul>
 
   </nav> -->
+  <main>
+    <div class="desktop">
+      <div>
+        <img src="icons/chrome.png" alt="">
+        <p>google chrome</p>
+      </div>
+      <div>
+        <img src="icons/facebook.png" alt="">
+        <p>facebook</p>
+      </div>
+      <div>
+        <img src="icons/folder.png" alt="">
+        <p>new folder</p>
+      </div>
+      <div>
+        <img src="icons/word.png" alt="">
+        <p>word</p>
+      </div>
+      <div>
+        <img src="icons/trash.png" alt="">
+        <p>recycle bin</p>
+      </div>
+      <div>
+        <img src="icons/visual studio code.png" alt="">
+        <p>visual studio</p>
+      </div>
+    </div>
+  </main>
+  <footer class="startMenu">
+    <div><img src="icons/message.png" alt="" class="openWindowIcon"></div>
+    <div class="timeDate">
+      <h4 id="time"></h4>
+      <h4 id="date"></h4>
+    </div>
+    <div>
+      <h5 style="font-weight: 300;">ENG</h5>
+    </div>
+    <section class="flexWindows">
+      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/word.png" alt="chrome icon"></div>
+      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/visual studio code.png"
+          alt="folder icon"></div>
+      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/folder.png" alt="word icon"></div>
+      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png"
+          alt="visual studio code icon"></div>
+    </section>
+    <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
+    <div><i id="startMenuIcons" class="fab fa-windows"></i></div>
+  </footer>
 
-<div>
-<img src="img/opening.jpg" alt=""class="opening">
-</div>
+  <script>
+    function bgChange(bg) {
+      document.getElementById("nav").style.background = bg;
+    }
+    let date = new Date();
+    document.getElementById("date").innerHTML = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+    if( date.getMinutes()<10){
+      document.getElementById("time").innerHTML = date.getHours() + ":0" + date.getMinutes();
+    }
+    else
+    {
+      document.getElementById("time").innerHTML = date.getHours() + ":" + date.getMinutes();
+    }
 
-<div class="desktop">
-  <div>
-    <img src="icons/chrome.png" alt="">
-    <p>google chrome</p>
-  </div>
-  <div>
-    <img src="icons/facebook.png" alt="">
-    <p>facebook</p>
-  </div>
-  <div>
-    <img src="icons/folder.png" alt="">
-    <p>new folder</p>
-  </div>
-  <div>
-    <img src="icons/word.png" alt="">
-    <p>word</p>
-  </div>
-  <div>
-    <img src="icons/trash.png" alt="">
-    <p>recycle bin</p>
-  </div>
-  <div>
-    <img src="icons/visual studio code.png" alt="">
-    <p>visual studio</p>
-  </div>
-</div>
-<div class="startMenu">
-  <div><img src="icons/message.png" alt=""  class="openWindowIcon"></div>
-<div class="timeDate">
-    <h4 id="time"></h4>
-    <h4 id="date"></h4>
-  </div>
-  <div><h5 style="font-weight: 300;">ENG</h5></div>
- <section class="flexWindows">
-  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/word.png" alt="chrome icon" ></div>
-  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/visual studio code.png" alt="folder icon" ></div>
-  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/folder.png" alt="word icon" ></div>
-  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png" alt="visual studio code icon"></div>
- </section>
-  <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
-  <div><i id="startMenuIcons" class="fab fa-windows"></i></div> 
-</div>
-
-<script>
-  function bgChange(bg) {
-    document.getElementById("nav").style.background = bg;
-  }
-   let  date = new Date();
-  document.getElementById("date").innerHTML= date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-  document.getElementById("time").innerHTML= date.getHours()+":"+date.getMinutes();
   </script>
 </body>
 
