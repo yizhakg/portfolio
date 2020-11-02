@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yizhak Gete</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/96c2cf9a06.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    clear: both;
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body>
+  <!-- <nav id="nav">
+    <div>
+      <ul class="navbar">
+        <li><a href=# target=_self class="navBarLinks"><</a></li>
+        <li><a href=# target=_self class="navBarLinks">Me</a></li>
+        <li><a href=# target=_self class="navBarLinks">Myself </a></li>
+        <li><a href=# target=_self class="navBarLinks">And i</a></li>
+          <li><a href=# target=_self class="navBarLinks">></a></li>
+      </ul>
+    </div>
+
+     <h6 style="margin: 0;">Theme color</h6>
+    <ul class="colors">
+     <li onclick="bgChange(this.style.backgroundColor)" style="cursor: pointer;;height: 20px ;width: 20px; background-color: rgba(127, 255, 212, 0.507);"></li>
+     <li onclick="bgChange(this.style.backgroundColor)" style="cursor: pointer;;height: 20px ;width: 20px; background-color: rgba(240, 230, 140,0.507);"></li>
+     <li onclick="bgChange(this.style.backgroundColor)" style="cursor: pointer;;height: 20px ;width: 20px; background-color: rgba(255, 99, 71, 0.507);"></li>
+    </ul>
+
+  </nav> -->
+
+<div>
+<img src="img/opening.jpg" alt=""class="opening">
+</div>
+
+<div class="desktop">
+  <div>
+    <img src="icons/chrome.png" alt="">
+    <p>google chrome</p>
+  </div>
+  <div>
+    <img src="icons/facebook.png" alt="">
+    <p>facebook</p>
+  </div>
+  <div>
+    <img src="icons/folder.png" alt="">
+    <p>new folder</p>
+  </div>
+  <div>
+    <img src="icons/word.png" alt="">
+    <p>word</p>
+  </div>
+  <div>
+    <img src="icons/trash.png" alt="">
+    <p>recycle bin</p>
+  </div>
+  <div>
+    <img src="icons/visual studio code.png" alt="">
+    <p>visual studio</p>
+  </div>
+</div>
+<div class="startMenu">
+  <div><img src="icons/message.png" alt=""  class="openWindowIcon"></div>
+<div class="timeDate">
+    <h4 id="time"></h4>
+    <h4 id="date"></h4>
+  </div>
+  <div><h5 style="font-weight: 300;">ENG</h5></div>
+ <section class="flexWindows">
+  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/word.png" alt="chrome icon" ></div>
+  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/visual studio code.png" alt="folder icon" ></div>
+  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/folder.png" alt="word icon" ></div>
+  <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png" alt="visual studio code icon"></div>
+ </section>
+  <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
+  <div><i id="startMenuIcons" class="fab fa-windows"></i></div> 
+</div>
+
+<script>
+  function bgChange(bg) {
+    document.getElementById("nav").style.background = bg;
+  }
+   let  date = new Date();
+  document.getElementById("date").innerHTML= date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+  document.getElementById("time").innerHTML= date.getHours()+":"+date.getMinutes();
+  </script>
+</body>
+
+</html>
