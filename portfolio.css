@@ -6,7 +6,7 @@ body{
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation-fill-mode: both;
-animation: background-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
+animation: background-in 4s ease-in-out 3s both;
 }
 
 /* --------------- Opening Image ------------------- */
@@ -17,7 +17,7 @@ animation: background-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
   height: 100vh;
   position: absolute;
   top: 0;
-  animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s linear 3s both;
+  animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s ease-in-out 3s both;
 }
  /* --------------- animation ------------------- */
 
@@ -196,7 +196,7 @@ nav{
 /* --------------- desktop icons ------------------- */
 
 .desktop{
-  animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+  animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
   position: absolute;
   top: 0;
   right: 0;
@@ -301,7 +301,7 @@ background-color: #3d608a81;
 /* --------------- start menu ------------------- */
 
 .startMenu{
-  animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+  animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
   color: white;
   background-color: #1d20269f;
   position: fixed;
@@ -341,7 +341,7 @@ background-color: #3d608a81;
   text-align: right;
 border-bottom: 3px solid #97e9ef93;
 height: 100%;
-width: 14vw;
+width: 17vw;
 margin: 0 0.2vw;
 font-size: 14px;
 }

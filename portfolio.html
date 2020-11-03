@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="refresh" content="60"> -->
   <title>Yizhak Gete</title>
   <link rel="stylesheet" href="portfolio.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
@@ -45,6 +46,7 @@
 
   </nav> -->
   <main>
+    
     <div class="desktop">
       <div>
         <img src="icons/chrome.png" alt="">
@@ -72,10 +74,10 @@
       </div>
     </div>
 
-    <div id ="startClick" class="startClick">
+    <div id ="startClick" class="startClick"  >
       <div class="box1"></div>
       <div class="box2">
-<p>about me</p>
+   <p>about me</p>
      <div class="squreImg">
 <div><img src="img/squreimg/1.jpg" alt=""></div>
 <div><img src="img/squreimg/2.jpg" alt=""></div>
@@ -90,7 +92,7 @@
       </div>
       <div class="box3">
         <p class="startClickMenu">recently opend</p>
-          <div class="startClickMenu">p<img src="icons/word.png" alt="chrome icon"></div>
+          <div class="startClickMenu">yizhak gete<img src="icons/word.png" alt="chrome icon"></div>
           <div class="startClickMenu">yizhak gete<img src="icons/visual studio code.png"
               alt="folder icon"></div>
           <div class="startClickMenu">yizhak gete<img src="icons/folder.png" alt="word icon"></div>
@@ -117,15 +119,15 @@
       <h5 style="font-weight: 300;">ENG</h5>
     </div>
     <section class="flexWindows">
-      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/word.png" alt="chrome icon"></div>
-      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/visual studio code.png"
+      <div class="openWindow">resume<img class="openWindowIcon" src="icons/word.png" alt="chrome icon"></div>
+      <div class="openWindow">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
           alt="folder icon"></div>
       <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/folder.png" alt="word icon"></div>
       <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png"
           alt="visual studio code icon"></div>
     </section>
     <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
-    <div onclick="myFunction()"><i id="startMenuIcons" class="fab fa-windows" ></i></div>
+    <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows" ></i></div>
   </footer>
 
   <script>
@@ -141,13 +143,17 @@
       document.getElementById("time").innerHTML = date.getHours() + ":" + date.getMinutes();
     }
 
-    function myFunction() {
+    function startMenuDisplay() {
   var x = document.getElementById("startClick");
   if (x.style.display === "none") {
     x.style.display = "grid";
   } else {
     x.style.display = "none";
   }
+}
+function startMenuDissapear(){
+  var x= document.getElementById("startClick");
+  x.style.display="none";
 }
   </script>
 </body>
