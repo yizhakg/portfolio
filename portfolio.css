@@ -8,19 +8,9 @@ body{
   animation-fill-mode: both;
 animation: background-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
 }
-@keyframes background-in {
-  0% {
-    background-color: white;
-  }
-  100% {
-    background-color: #06060f;
-    background-image: url(img/desktop.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-}
 
-/* -------------- opening image -------------- */
+/* --------------- Opening Image ------------------- */
+
 
 .opening{
   width: 100vw;
@@ -29,7 +19,8 @@ animation: background-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
   top: 0;
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s linear 3s both;
 }
- 
+ /* --------------- animation ------------------- */
+
  @keyframes focus-in {
   0% {
     filter: blur(12px);
@@ -153,8 +144,19 @@ animation: background-in 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s both;
     opacity: 0;
   }
 }
+@keyframes background-in {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #06060f;
+    background-image: url(img/desktop.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
 
-/* --------------end-  opening image -------------- */
+/* --------------- navBar ------------------- */
 
 nav{
   background-color: rgba(195, 205, 209, 0.5);
@@ -190,6 +192,9 @@ nav{
 .colors>li{
   margin: 10px;
 }
+
+/* --------------- desktop icons ------------------- */
+
 .desktop{
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
   position: absolute;
@@ -224,8 +229,76 @@ background-color: #3d608a81;
   color: white;
   text-transform: capitalize;
 }
+/* --------------- start menu ------------------- */
+.startClick{
+  color: white;
+  background-color: #1d2026d3;
+  /* background-color: white; */
+  height: 80vh;
+  width: 72vw;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  display: none;
+  grid-template-columns:33.3% 33.3% 29% 4.3%;
+}
 
+.startClick>div{
+  margin: 0;
+  /* border: 1px solid black; */
+  margin: 10px;
+}
 
+.box4{
+  display: grid;
+  grid-template-rows:6% auto 6% 6% 6% ;
+  justify-content: center;
+  align-items: center;
+}
+
+.box3,.box2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  
+}
+.startClickMenu{
+  height: 40px;
+  width: 100%;
+  text-align: right;
+
+}
+.startClickMenu img{
+  display: inline-block;
+  background-color: cadetblue;
+  padding: 4px;
+  height: auto;
+  width: 30px;
+}
+.squreImg{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.squreImg div{
+  height: 6vw;
+  width: 6vw;
+  background-color: cadetblue;
+  margin: 4px;
+}
+.squreImg img{
+  height: 6vw;
+  width: 6vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.squreImg img:hover{
+  filter: invert(0.1);
+  cursor: pointer;
+  
+}
+
+/* --------------- start menu ------------------- */
 
 .startMenu{
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
@@ -273,7 +346,7 @@ margin: 0 0.2vw;
 font-size: 14px;
 }
 
-.openWindow:hover,.startMenu>div:hover{
+.openWindow:hover,.startMenu>div:hover,.startClickMenu:hover{
   background-color: #3139447c;
   cursor: pointer;
 }
