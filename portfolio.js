@@ -37,6 +37,25 @@ function galleryFolderBarClose(){
   var x = document.getElementById("galleryFolderBar");
   x.style.display = "none";
 }
+// -------------
+function resumeDisplay(){
+  var x = document.getElementById("resume");
+if (x.style.display === "unset") {
+x.style.display = "none";
+} else {
+x.style.display = "unset";
+}
+}
+
+function resumeBarOpen(){
+  var x = document.getElementById("resumeBar");
+  x.style.display = "unset";
+}
+
+function resumeBarClose(){
+  var x = document.getElementById("resumeBar");
+  x.style.display = "none";
+}
 // ------------------------------------
 
 let images="";

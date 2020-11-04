@@ -203,7 +203,7 @@ background-color: #06060f;
 
 .resume{
   position: absolute;
-  top:10vh;
+  top:5vh;
   right: 25vw;
   display: none;
 }
@@ -394,3 +394,4 @@ font-size: 14px;
 
 
   #galleryFolderBar{display: none;}
+  #resumeBar{display: none;}
