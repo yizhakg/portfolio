@@ -15,10 +15,15 @@ x.style.display = "grid";
 x.style.display = "none";
 }
 }
+
 function startMenuDissapear(){
 var x= document.getElementById("startClick");
 x.style.display="none";
 }
+function startMenuApear(){
+  var x= document.getElementById("startClick");
+  x.style.display="grid";
+  }
 
 function galleryFolderDisplay(){
   var x = document.getElementById("galleryFolder");
