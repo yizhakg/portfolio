@@ -170,41 +170,42 @@ background-color: #06060f;
   }
 } */
 
-/* --------------- navBar ------------------- */
-
-nav{
-  background-color: rgba(195, 205, 209, 0.5);
-  text-align: center;
-  font-family: 'Syne Mono', monospace;
+/* --------------- gallery folder design ------------------- */
+.galleryFolder{
+  display: none;
+  position: absolute;
+  top:15vh;
+  right: 25vw;
+  height: 70vh;
+  width: 50vw;
+  background-image: url(img/gallery/gallery.png);
+  background-color: #06060f;
+    background-size:cover;
+    /* background-position: center; */
 }
-.navbar{
+.closeflex{
   display: flex;
-  list-style: none;
-  justify-content: center;
-  margin: 0;
-}
-.navbar li{
-  display: block;
-  margin: 10px 20px;
-}
-.navBarLinks{ 
-  font-size: 30px;
-  font-weight: 800;;
-  color: rgb(255, 255, 255);
-}
-.navBarLinks:hover{
-  color:rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
 }
 
-.colors{
-  display: flex;
-  list-style: none;
-  justify-content: center;
+.closeflex p{
   margin: 0;
-  padding: 0;
+  padding: 3px 10px;
 }
-.colors>li{
-  margin: 10px;
+.closeflex p:hover{
+  color: white;
+  background-color: rgba(204, 49, 21, 0.801);
+  cursor: pointer;
+}
+/* --------------- resume Doc ------------------- */
+
+.resume{
+  position: absolute;
+  top:10vh;
+  right: 25vw;
+  display: none;
 }
 
 /* --------------- desktop icons ------------------- */
@@ -257,9 +258,9 @@ background-color: #3d608a81;
   grid-template-columns:33.3% 33.3% 27% 6.3%;
 }
 
-.startClick>div{
-  /* border: 2px solid white; */
-}
+/* .startClick>div{
+  border: 2px solid white;
+} */
 .sideClickMenu{
 width: 40px;
 height: 40px;
@@ -390,3 +391,6 @@ font-size: 14px;
   margin: 0;  font-weight: 100;
   }
   .timeDate h4{ margin: 0;  font-weight: 100;}
+
+
+  #galleryFolderBar{display: none;}

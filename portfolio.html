@@ -25,44 +25,24 @@
   </div> -->
 
   <!-- -------- -->
-
-  <!-- <nav id="nav">
-    <div>
-      <ul class="navbar">
-        <li><a href=# target=_self class="navBarLinks"><</a></li>
-        <li><a href=# target=_self class="navBarLinks">Me</a></li>
-        <li><a href=# target=_self class="navBarLinks">Myself </a></li>
-        <li><a href=# target=_self class="navBarLinks">And i</a></li>
-          <li><a href=# target=_self class="navBarLinks">></a></li>
-      </ul>
-    </div>
-
-     <h6 style="margin: 0;">Theme color</h6>
-    <ul class="colors">
-     <li onclick="bgChange(this.style.backgroundColor)" style="cursor: pointer;;height: 20px ;width: 20px; background-color: rgba(127, 255, 212, 0.507);"></li>
-     <li onclick="bgChange(this.style.backgroundColor)" style="cursor: pointer;;height: 20px ;width: 20px; background-color: rgba(240, 230, 140,0.507);"></li>
-     <li onclick="bgChange(this.style.backgroundColor)" style="cursor: pointer;;height: 20px ;width: 20px; background-color: rgba(255, 99, 71, 0.507);"></li>
-    </ul>
-
-  </nav> -->
   <main>
     
-    <div class="desktop">
+    <div class="desktop"> <!----desktop icons---->
       <div>
         <img src="icons/chrome.png" alt="">
         <p>google chrome</p>
       </div>
-      <div>
+      <div ondblclick="linkMe(`http://www.facebook.com/yizhakg`)">
         <img src="icons/facebook.png" alt="">
         <p>facebook</p>
       </div>
-      <div>
+      <div ondblclick="galleryFolderDisplay(),galleryFolderBarOpen()">
         <img src="icons/folder.png" alt="">
-        <p>Gallery</p>
+        <p >Gallery</p>`
       </div>
       <div>
         <img src="icons/word.png" alt="">
-        <p>word</p>
+        <p>Resume</p>
       </div>
       <div>
         <img src="icons/trash.png" alt="">
@@ -74,7 +54,23 @@
       </div>
     </div>
 
-    <div id ="startClick" class="startClick"  >
+<div id="galleryFolder" class="galleryFolder"> <!----gallery folder design---->
+  <div  class="closeflex">
+    <p onclick="galleryFolderDisplay(),galleryFolderBarClose()">x</p>
+    <p>□</p>
+    <p onclick="galleryFolderDisplay()">-</p>
+  </div>
+  <div id="squreImg" class="squreImg" style="width:75% ;position: absolute;top:80px;left: 20px;">
+
+    </div>
+
+  </div>
+
+<div class="resume">
+  <iframe src="https://drive.google.com/file/d/1Vfp_A8y4_Eck8feNIj0LeZhXMJs814SN/preview" width="640" height="480"></iframe>
+</div>
+
+    <div id ="startClick" class="startClick"  >  <!----div start buton click open---->
       <div class="box1">
 
       </div>
@@ -124,7 +120,7 @@
     </div>
   </main>
 
-  <footer class="startMenu">
+  <footer class="startMenu">  <!---- bottom bar---->
     <div><img src="icons/message.png" alt="" class="openWindowIcon"></div>
     <div class="timeDate">
       <h4 id="time"></h4>
@@ -137,7 +133,7 @@
       <div class="openWindow">resume<img class="openWindowIcon" src="icons/word.png" alt="chrome icon"></div>
       <div class="openWindow">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
           alt="folder icon"></div>
-      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/folder.png" alt="word icon"></div>
+      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay()">Gallery<img class="openWindowIcon" src="icons/folder.png" alt="word icon"></div>
       <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png"
           alt="visual studio code icon"></div>
     </section>

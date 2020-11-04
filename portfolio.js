@@ -1,7 +1,3 @@
-function bgChange(bg) {// background change 
-  document.getElementById("nav").style.background = bg;
-}
-
 // ------------------time+date  ---------------------
 function addZero(num){
   if(num<10){return "0"+num}
@@ -22,4 +18,35 @@ x.style.display = "none";
 function startMenuDissapear(){
 var x= document.getElementById("startClick");
 x.style.display="none";
+}
+
+function galleryFolderDisplay(){
+  var x = document.getElementById("galleryFolder");
+if (x.style.display === "unset") {
+x.style.display = "none";
+} else {
+x.style.display = "unset";
+}
+}
+
+function galleryFolderBarOpen(){
+  var x = document.getElementById("galleryFolderBar");
+  x.style.display = "flex";
+}
+function galleryFolderBarClose(){
+  var x = document.getElementById("galleryFolderBar");
+  x.style.display = "none";
+}
+// ------------------------------------
+
+let images="";
+let z= document.getElementById("squreImg");
+for(let i=1;i<=7;i++){
+  images+=`<div><img src="img/squreimg/`+i+`.jpg" alt=""></div>`;
+}
+z.insertAdjacentHTML("beforeend", images);
+// ------------------------------------
+
+function linkMe(link){
+  window.open(link);
 }
