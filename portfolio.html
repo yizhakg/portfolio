@@ -20,9 +20,9 @@
 
 <body>
   <!-- opening image -->
-  <div>
+  <!-- <div>
     <img src="img/opening.jpg" alt="" class="opening">
-  </div>
+  </div> -->
 
   <!-- -------- -->
 
@@ -75,9 +75,12 @@
     </div>
 
     <div id ="startClick" class="startClick"  >
-      <div class="box1"></div>
-      <div class="box2">
-   <p>about me</p>
+      <div class="box1">
+
+      </div>
+
+      <div class="clickMenuBox">
+   <div class="centerTextInDive"><p>about me</p></div>
      <div class="squreImg">
 <div><img src="img/squreimg/1.jpg" alt=""></div>
 <div><img src="img/squreimg/2.jpg" alt=""></div>
@@ -90,21 +93,33 @@
 
      </div>
       </div>
-      <div class="box3">
-        <p class="startClickMenu">recently opend</p>
-          <div class="startClickMenu">yizhak gete<img src="icons/word.png" alt="chrome icon"></div>
-          <div class="startClickMenu">yizhak gete<img src="icons/visual studio code.png"
-              alt="folder icon"></div>
-          <div class="startClickMenu">yizhak gete<img src="icons/folder.png" alt="word icon"></div>
-          <div class="startClickMenu">yizhak gete<img src="icons/chrome.png"
-              alt="visual studio code icon"></div>
+      <div class="clickMenuBox">
+        <div class="centerTextInDive"><p>recently opend</p></div>
+          <div class="startClickMenu">
+            <div class="centerTextInDive"><p>about me</p></div>
+            <img src="icons/word.png" alt="chrome icon">
+          </div>
+          <div class="startClickMenu">
+            <div class="centerTextInDive"><p>about me</p></div>
+            <img src="icons/visual studio code.png"
+              alt="folder icon">
+            </div>
+          <div class="startClickMenu">
+            <div class="centerTextInDive"><p>about me</p></div>
+            <img src="icons/folder.png" alt="word icon">
+          </div>
+          <div class="startClickMenu">
+            <div class="centerTextInDive"><p>about me</p></div>
+            <img src="icons/chrome.png"
+              alt="visual studio code icon">
+            </div>
       </div>
       <div class="box4">
-        <i class="fas fa-bars"></i>
+        <div class="sideClickMenu"><i class="fas fa-bars"></i></div>
         <div></div>
-        <i class="far fa-image"></i>
-        <i class="fas fa-cog"></i>
-        <i class="fas fa-power-off"></i>
+        <div class="sideClickMenu"><i class="far fa-image"></i></div>
+        <div class="sideClickMenu"><i class="fas fa-cog"></i></div>
+        <div class="sideClickMenu"><i  class="fas fa-power-off"></i></div>
       </div>
     </div>
   </main>
@@ -130,31 +145,7 @@
     <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows" ></i></div>
   </footer>
 
-  <script>
-    function bgChange(bg) {
-      document.getElementById("nav").style.background = bg;
-    }
-    let date = new Date();
-    document.getElementById("date").innerHTML = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-    if (date.getMinutes() < 10) {
-      document.getElementById("time").innerHTML = date.getHours() + ":0" + date.getMinutes();
-    }
-    else {
-      document.getElementById("time").innerHTML = date.getHours() + ":" + date.getMinutes();
-    }
-
-    function startMenuDisplay() {
-  var x = document.getElementById("startClick");
-  if (x.style.display === "none") {
-    x.style.display = "grid";
-  } else {
-    x.style.display = "none";
-  }
-}
-function startMenuDissapear(){
-  var x= document.getElementById("startClick");
-  x.style.display="none";
-}
+  <script src="portfolio.js">
   </script>
 </body>
 

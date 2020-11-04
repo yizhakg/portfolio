@@ -7,8 +7,22 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation-fill-mode: both;
 animation: background-in 4s ease-in-out 3s both;
+background-color: #06060f;
+    background-image: url(img/desktop.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
+.centerTextInDive{ 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: right;
+  width: 100%;
+}
+.centerTextInDive>p{
+  width: 100%;
+  margin: 10px;
+}
 /* --------------- Opening Image ------------------- */
 
 
@@ -20,7 +34,7 @@ animation: background-in 4s ease-in-out 3s both;
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s ease-in-out 3s both;
 }
  /* --------------- animation ------------------- */
-
+/* 
  @keyframes focus-in {
   0% {
     filter: blur(12px);
@@ -154,7 +168,7 @@ animation: background-in 4s ease-in-out 3s both;
     background-size: cover;
     background-position: center;
   }
-}
+} */
 
 /* --------------- navBar ------------------- */
 
@@ -229,7 +243,7 @@ background-color: #3d608a81;
   color: white;
   text-transform: capitalize;
 }
-/* --------------- start menu ------------------- */
+/* --------------- start click menu ------------------- */
 .startClick{
   color: white;
   background-color: #1d2026d3;
@@ -240,23 +254,31 @@ background-color: #3d608a81;
   bottom: 40px;
   right: 0;
   display: none;
-  grid-template-columns:33.3% 33.3% 29% 4.3%;
+  grid-template-columns:33.3% 33.3% 27% 6.3%;
 }
 
 .startClick>div{
-  margin: 0;
-  /* border: 1px solid black; */
-  margin: 10px;
+  /* border: 2px solid white; */
+}
+.sideClickMenu{
+width: 40px;
+height: 40px;
+}
+.sideClickMenu>i{
+padding: 10px;
+font-size: 18px;
 }
 
 .box4{
   display: grid;
-  grid-template-rows:6% auto 6% 6% 6% ;
+  grid-template-rows:8% auto 8% 8% 8% ;
   justify-content: center;
   align-items: center;
+  margin: 17px 0 0 0;
 }
 
-.box3,.box2{
+.clickMenuBox{
+  margin: 12px 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -264,18 +286,21 @@ background-color: #3d608a81;
   
 }
 .startClickMenu{
-  height: 40px;
+  padding: 2px 0;
   width: 100%;
   text-align: right;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .startClickMenu img{
-  display: inline-block;
   background-color: cadetblue;
   padding: 4px;
-  height: auto;
-  width: 30px;
+  height: 34px;
+  width: 34px;
 }
+.startClickMenu>div:hover{background: none;}
 .squreImg{
   display: flex;
   flex-direction: row-reverse;
@@ -295,7 +320,6 @@ background-color: #3d608a81;
 .squreImg img:hover{
   filter: invert(0.1);
   cursor: pointer;
-  
 }
 
 /* --------------- start menu ------------------- */
@@ -308,7 +332,7 @@ background-color: #3d608a81;
   bottom: 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 3.5% 7.5% 3.5% auto 3.5% 3.5%;
+  grid-template-columns: 3.5% 6% 3.5% auto 3.5% 3.5%;
   grid-template-rows: 40px;
   justify-items: center;
   align-items: center;
@@ -346,7 +370,7 @@ margin: 0 0.2vw;
 font-size: 14px;
 }
 
-.openWindow:hover,.startMenu>div:hover,.startClickMenu:hover{
+.openWindow:hover,.startMenu>div:hover,.startClickMenu:hover,.sideClickMenu:hover,.centerTextInDive:hover{
   background-color: #3139447c;
   cursor: pointer;
 }
