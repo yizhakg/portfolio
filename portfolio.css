@@ -34,8 +34,8 @@ background-color: #06060f;
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s ease-in-out 3s both;
 }
  /* --------------- animation ------------------- */
-/* 
- @keyframes focus-in {
+
+ /* @keyframes focus-in {
   0% {
     filter: blur(12px);
     opacity: 0;
@@ -176,23 +176,29 @@ background-color: #06060f;
   position: absolute;
   top:15vh;
   right: 25vw;
-  height: 70vh;
-  width: 50vw;
-  background-image: url(img/gallery/gallery.png);
-  background-color: #06060f;
-    background-size:cover;
-    /* background-position: center; */
+  height: 450px;
+  width: 700px;
+}
+.gallerybackground{
+  height: 100%;
+  width: 100%;
 }
 .closeflex{
   display: flex;
-  font-size: 15px;
+  font-size: 80%;
   font-weight: 300;
   position: absolute;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  width: 10%;
+  margin: 0;
+  padding: 0;
 }
 
 .closeflex p{
   margin: 0;
-  padding: 3px 10px;
+  padding: 3% 10%;
 }
 .closeflex p:hover{
   color: white;
@@ -204,7 +210,7 @@ background-color: #06060f;
 .resume{
   position: absolute;
   top:5vh;
-  right: 25vw;
+  right: 18vw;
   display: none;
 }
 
@@ -223,9 +229,14 @@ background-color: #06060f;
   height: 97vh;
 }
 .desktop>div{
-  width: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 80px;
   text-align: center;
-  margin: 15px;
+  margin: 8px;
   padding: 4px;
 }
 
@@ -241,8 +252,55 @@ background-color: #3d608a81;
 }
 .desktop p{
   font-size: 10px;
+  margin: 7px 0;
   color: white;
   text-transform: capitalize;
+}
+
+/* --------------- shutdown ------------------- */
+.turnOff{
+  height: 98px;
+  width: 240PX;
+  display: none;
+  grid-template-rows: 33.3% 33.3% 33.4%;
+  background-image: url(img/shutdown/select380x155.png);
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+}
+
+/* --------------- powerOffWindow ------------------- */
+#powerOff{
+  position: absolute;
+height: 100%;
+width: 100%;
+background-color: #02599c;
+z-index: 1;
+display: none;
+justify-content: center;
+align-items: center;
+} 
+/* --------------- sleepWindow ------------------- */
+#sleep{
+  position: absolute;
+height: 100%;
+width: 100%;
+background-color: #0e1113f3;
+z-index: 1;
+display: none;
+justify-content: center;
+align-content: center;
+} 
+#sleep:hover{
+  cursor: default;
+}
+
+#bigTime{
+  height: 300px;
+  width: auto;
+  font-size: 200px;
+  color: rgba(255, 255, 255, 0.144);
 }
 /* --------------- start click menu ------------------- */
 .startClick{
@@ -255,7 +313,7 @@ background-color: #3d608a81;
   bottom: 40px;
   right: 0;
   display: none;
-  grid-template-columns:33.3% 33.3% 27% 6.3%;
+  grid-template-columns:33.3% 33.3% 29% 4.3%;
 }
 
 /* .startClick>div{
@@ -267,7 +325,7 @@ height: 40px;
 }
 .sideClickMenu>i{
 padding: 10px;
-font-size: 18px;
+font-size: 1.3vw;
 }
 
 .box4{
@@ -368,10 +426,10 @@ border-bottom: 3px solid #97e9ef93;
 height: 100%;
 width: 17vw;
 margin: 0 0.2vw;
-font-size: 14px;
+font-size: 70%;
 }
 
-.openWindow:hover,.startMenu>div:hover,.startClickMenu:hover,.sideClickMenu:hover,.centerTextInDive:hover{
+.openWindow:hover,.startMenu>div:hover,.startClickMenu:hover,.sideClickMenu:hover,.centerTextInDive:hover,.shutDownHover:hover{
   background-color: #3139447c;
   cursor: pointer;
 }
@@ -395,3 +453,5 @@ font-size: 14px;
 
   #galleryFolderBar{display: none;}
   #resumeBar{display: none;}
+  #powerOff{transition: color .5s;}
+  #powerOff:hover{color:#F95738}

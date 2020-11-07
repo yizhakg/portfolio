@@ -20,14 +20,17 @@
 
 <body>
   <!-- opening image -->
-  <!-- <div>
+  <!--   
+  <div>
     <img src="img/opening.jpg" alt="" class="opening">
   </div> -->
 
-  <!-- -------- -->
+  <!------main start------>
   <main>
-    
-    <div class="desktop"> <!----desktop icons---->
+
+          <!----desktop icons---->
+    <div class="desktop">
+
       <div>
         <img src="icons/chrome.png" alt="">
         <p>google chrome</p>
@@ -38,10 +41,10 @@
       </div>
       <div ondblclick="galleryFolderDisplay(),galleryFolderBarOpen()">
         <img src="icons/folder.png" alt="">
-        <p >Gallery</p>`
+        <p>Gallery</p>`
       </div>
       <div>
-        <img  ondblclick="resumeDisplay(),resumeBarOpen()" src="icons/word.png" alt="">
+        <img ondblclick="resumeDisplay(),resumeBarOpen()" src="icons/word.png" alt="">
         <p>Resume</p>
       </div>
       <div>
@@ -50,82 +53,118 @@
       </div>
       <div>
         <img src="icons/visual studio code.png" alt="">
-        <p>visual studio</p>
+        <p>Programming Knowledge</p>
       </div>
     </div>
 
-<div id="galleryFolder" class="galleryFolder"> <!----gallery folder design---->
-  <div  class="closeflex">
-    <p onclick="galleryFolderDisplay(),galleryFolderBarClose()">x</p>
-    <p>□</p>
-    <p onclick="galleryFolderDisplay()">-</p>
-  </div>
-  <div id="squreImg" class="squreImg" style="width:75% ;position: absolute;top:80px;left: 20px;">
+          <!----gallery folder design---->
+    <div id="galleryFolder" class="galleryFolder">
 
+      <div class="closeflex">
+        <p onclick="galleryFolderDisplay(),galleryFolderBarClose()">x</p>
+        <p>□</p>
+        <p onclick="galleryFolderDisplay()">-</p>
+      </div>
+      <div id="squreImg" class="squreImg" style="width:75% ;position: absolute;top:15vh;left: 0;">
+
+      </div>
+      <img class="gallerybackground" src="img/gallery/gallery.png" alt="">
     </div>
 
-  </div>
+      <!----resume design---->
+    <div id="resume" class="resume">
+<div style="background-color: rgb(158, 156, 156);position: absolute;height: 23px;width: 800px;top: 0;cursor: move;"></div>
+      <div class="closeflex" >
+        <p onclick="resumeDisplay(),resumeBarClose()">x</p>
+        <p>□</p>
+        <p onclick="resumeDisplay()">-</p>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1Vfp_A8y4_Eck8feNIj0LeZhXMJs814SN/preview" width="800"
+        height="500"></iframe>
+    </div>
 
-<div id="resume" class="resume"> <!----resume design---->
-  <div  class="closeflex" style="top:10px;left: 10px;">
-    <p onclick="resumeDisplay(),resumeBarClose()">x</p>
-    <p>□</p>
-    <p onclick="resumeDisplay()">-</p>
-  </div>
-  <iframe src="https://drive.google.com/file/d/1Vfp_A8y4_Eck8feNIj0LeZhXMJs814SN/preview" width="640" height="480"></iframe>
-</div>
+          <!----div start buton click open---->
+    <div id="startClick" class="startClick" onmouseover="startMenuApear()" onmouseout="startMenuDissapear()">
 
-    <div id ="startClick" class="startClick" onmouseover="startMenuApear()" onmouseout="startMenuDissapear()">  <!----div start buton click open---->
       <div class="box1">
 
       </div>
 
       <div class="clickMenuBox">
-   <div class="centerTextInDive"><p>about me</p></div>
-     <div class="squreImg">
-<div><img src="img/squreimg/1.jpg" alt=""></div>
-<div><img src="img/squreimg/2.jpg" alt=""></div>
-<div><img src="img/squreimg/3.jpg" alt=""></div>
-<div><img src="img/squreimg/4.jpg" alt=""></div>
-<div><img src="img/squreimg/5.jpg" alt=""></div>
-<div><img src="img/squreimg/6.jpg" alt=""></div>
-<div><img src="img/squreimg/7.jpg" alt=""></div>
-<div></div>
+        <div class="centerTextInDive">
+          <p>about me</p>
+        </div>
+        <div class="squreImg">
+          <div><img src="img/squreimg/1.jpg" alt=""></div>
+          <div><img src="img/squreimg/2.jpg" alt=""></div>
+          <div><img src="img/squreimg/3.jpg" alt=""></div>
+          <div><img src="img/squreimg/4.jpg" alt=""></div>
+          <div><img src="img/squreimg/5.jpg" alt=""></div>
+          <div><img src="img/squreimg/6.jpg" alt=""></div>
+          <div><img src="img/squreimg/7.jpg" alt=""></div>
+          <div></div>
 
-     </div>
+        </div>
       </div>
       <div class="clickMenuBox">
-        <div class="centerTextInDive"><p>recently opend</p></div>
-          <div class="startClickMenu">
-            <div class="centerTextInDive"><p>about me</p></div>
-            <img src="icons/word.png" alt="chrome icon">
+        <div class="centerTextInDive">
+          <p>recently opend</p>
+        </div>
+        <div class="startClickMenu">
+          <div class="centerTextInDive">
+            <p>about me</p>
           </div>
-          <div class="startClickMenu">
-            <div class="centerTextInDive"><p>about me</p></div>
-            <img src="icons/visual studio code.png"
-              alt="folder icon">
-            </div>
-          <div class="startClickMenu">
-            <div class="centerTextInDive"><p>about me</p></div>
-            <img src="icons/folder.png" alt="word icon">
+          <img src="icons/word.png" alt="word icon">
+        </div>
+        <div class="startClickMenu">
+          <div class="centerTextInDive">
+            <p>about me</p>
           </div>
-          <div class="startClickMenu">
-            <div class="centerTextInDive"><p>about me</p></div>
-            <img src="icons/chrome.png"
-              alt="visual studio code icon">
-            </div>
+          <img src="icons/visual studio code.png" alt="visual studio code icon">
+        </div>
+        <div class="startClickMenu">
+          <div class="centerTextInDive">
+            <p>about me</p>
+          </div>
+          <img src="icons/folder.png" alt="folder icon">
+        </div>
+        <div class="startClickMenu">
+          <div class="centerTextInDive">
+            <p>about me</p>
+          </div>
+          <img src="icons/chrome.png" alt="chrome icon">
+        </div>
       </div>
       <div class="box4">
         <div class="sideClickMenu"><i class="fas fa-bars"></i></div>
         <div></div>
         <div class="sideClickMenu"><i class="far fa-image"></i></div>
         <div class="sideClickMenu"><i class="fas fa-cog"></i></div>
-        <div class="sideClickMenu"><i  class="fas fa-power-off"></i></div>
+        <div class="sideClickMenu" onclick="turnOffApear()"><i class="fas fa-power-off"></i></div>
       </div>
     </div>
+
+      <!----turnOff menu---->
+    <div id="turnOff" class="turnOff" onmouseover="turnOffApear(),startMenuApear()" onmouseout="turnOffDissapear()">
+      <div onclick="sleepApear(),startMenuDissapear()" class="shutDownHover"></div>
+      <div onclick="powerOffApear()" class="shutDownHover"></div>
+      <div onClick="window.location.reload()" class="shutDownHover"></div>
+    </div>
+
+      <!----powerOff Window---->
+    <div id="powerOff">
+      <img src="img/shutdown/shutting-down.gif" alt="">
+    </div>
+
+          <!----sleep Window---->
+<div id="sleep" onclick="sleepDissapear()">
+<div id="bigTime"></div>
+</div>
+
   </main>
 
-  <footer class="startMenu">  <!---- bottom bar---->
+      <!---- Footer ( Start Menu bottom bar)---->
+  <footer class="startMenu">
     <div><img src="icons/message.png" alt="" class="openWindowIcon"></div>
     <div class="timeDate">
       <h4 id="time"></h4>
@@ -135,15 +174,16 @@
       <h5 style="font-weight: 300;">ENG</h5>
     </div>
     <section class="flexWindows">
-      <div id="resumeBar" class="openWindow" onclick="resumeDisplay()">resume<img class="openWindowIcon" src="icons/word.png" alt="chrome icon"></div>
+      <div id="resumeBar" class="openWindow" onclick="resumeDisplay()">resume<img class="openWindowIcon"
+          src="icons/word.png" alt="word icon"></div>
       <div class="openWindow">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
-          alt="folder icon"></div>
-      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay(galleryFolder)">Gallery<img class="openWindowIcon" src="icons/folder.png" alt="word icon"></div>
-      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png"
           alt="visual studio code icon"></div>
+      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay(galleryFolder)">Gallery<img
+          class="openWindowIcon" src="icons/folder.png" alt="folder icon"></div>
+      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png" alt="chrome icon"></div>
     </section>
     <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
-    <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows" ></i></div>
+    <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows"></i></div>
   </footer>
 
   <script src="portfolio.js">
