@@ -58,7 +58,7 @@ x.style.display = "unset";
 
 function resumeBarOpen(){
   var x = document.getElementById("resumeBar");
-  x.style.display = "unset";
+  x.style.display = "flex";
 }
 
 function resumeBarClose(){

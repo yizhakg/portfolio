@@ -73,7 +73,7 @@
 
       <!----resume design---->
     <div id="resume" class="resume">
-<div style="background-color: rgb(158, 156, 156);position: absolute;height: 23px;width: 800px;top: 0;cursor: move;"></div>
+<div style="background-color: rgb(158, 156, 156);position: absolute;height: 23px;width: 800px;top: 0;"></div>
       <div class="closeflex" >
         <p onclick="resumeDisplay(),resumeBarClose()">x</p>
         <p>□</p>
@@ -176,11 +176,11 @@
     <section class="flexWindows">
       <div id="resumeBar" class="openWindow" onclick="resumeDisplay()">resume<img class="openWindowIcon"
           src="icons/word.png" alt="word icon"></div>
-      <div class="openWindow">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
+      <div class="openWindow" style="display: none;">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
           alt="visual studio code icon"></div>
       <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay(galleryFolder)">Gallery<img
           class="openWindowIcon" src="icons/folder.png" alt="folder icon"></div>
-      <div class="openWindow">yizhak gete<img class="openWindowIcon" src="icons/chrome.png" alt="chrome icon"></div>
+      <div class="openWindow" style="display: none;">yizhak gete<img class="openWindowIcon" src="icons/chrome.png" alt="chrome icon"></div>
     </section>
     <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
     <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows"></i></div>
