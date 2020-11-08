@@ -20,10 +20,10 @@
 
 <body>
   <!-- opening image -->
-  <!--   
+    
   <div>
     <img src="img/opening.jpg" alt="" class="opening">
-  </div> -->
+  </div>
 
   <!------main start------>
   <main>
@@ -32,10 +32,10 @@
     <div class="desktop">
 
       <div>
-        <img src="icons/chrome.png" alt="">
-        <p>google chrome</p>
+        <img src="icons/linkedin.png" alt="">
+        <p>linkedin</p>
       </div>
-      <div ondblclick="linkMe(`http://www.facebook.com/yizhakg`)">
+      <div ondblclick="linkMe(`http://www.facebook.com/yizhakg`,`facebookRecent`)">
         <img src="icons/facebook.png" alt="">
         <p>facebook</p>
       </div>
@@ -83,12 +83,8 @@
         height="500"></iframe>
     </div>
 
-          <!----div start buton click open---->
+          <!---- start button click open---->
     <div id="startClick" class="startClick" onmouseover="startMenuApear()" onmouseout="startMenuDissapear()">
-
-      <div class="box1">
-
-      </div>
 
       <div class="clickMenuBox">
         <div class="centerTextInDive">
@@ -110,37 +106,43 @@
         <div class="centerTextInDive">
           <p>recently opend</p>
         </div>
-        <div class="startClickMenu">
+        <div id="resumeRecent" class="startClickMenu">
           <div class="centerTextInDive">
-            <p>about me</p>
+            <p>Resume</p>
           </div>
           <img src="icons/word.png" alt="word icon">
         </div>
-        <div class="startClickMenu">
+        <div id="vscRecent"class="startClickMenu">
           <div class="centerTextInDive">
-            <p>about me</p>
+            <p>Programming Knowledge</p>
           </div>
           <img src="icons/visual studio code.png" alt="visual studio code icon">
         </div>
-        <div class="startClickMenu">
+        <div id="galleryRecent" class="startClickMenu">
           <div class="centerTextInDive">
-            <p>about me</p>
+            <p>Gallery</p>
           </div>
           <img src="icons/folder.png" alt="folder icon">
         </div>
-        <div class="startClickMenu">
+        <div id="linkedinRecent" class="startClickMenu">
           <div class="centerTextInDive">
-            <p>about me</p>
+            <p>Linkedin</p>
           </div>
-          <img src="icons/chrome.png" alt="chrome icon">
+          <img src="icons/linkedin.png" alt="linkedin icon">
+        </div>
+        <div id="facebookRecent" class="startClickMenu">
+          <div class="centerTextInDive">
+            <p>Facebook</p>
+          </div>
+          <img src="icons/facebook.png" alt="linkedin icon">
         </div>
       </div>
-      <div class="box4">
+      <div class="box3">
         <div class="sideClickMenu"><i class="fas fa-bars"></i></div>
         <div></div>
-        <div class="sideClickMenu"><i class="far fa-image"></i></div>
+        <div onclick="galleryFolderDisplay(),galleryFolderBarOpen()" class="sideClickMenu"><i class="far fa-image"></i></div>
         <div class="sideClickMenu"><i class="fas fa-cog"></i></div>
-        <div class="sideClickMenu" onclick="turnOffApear()"><i class="fas fa-power-off"></i></div>
+        <div id="powerButton" class="sideClickMenu" onclick="turnOffApear()"><i class="fas fa-power-off"></i></div>
       </div>
     </div>
 
@@ -178,9 +180,9 @@
           src="icons/word.png" alt="word icon"></div>
       <div class="openWindow" style="display: none;">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
           alt="visual studio code icon"></div>
-      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay(galleryFolder)">Gallery<img
+      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay()">Gallery<img
           class="openWindowIcon" src="icons/folder.png" alt="folder icon"></div>
-      <div class="openWindow" style="display: none;">yizhak gete<img class="openWindowIcon" src="icons/chrome.png" alt="chrome icon"></div>
+      <div class="openWindow" style="display: none;">yizhak gete<img class="openWindowIcon" src="icons/linkedin.png" alt="linkedin icon"></div>
     </section>
     <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
     <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows"></i></div>
@@ -188,6 +190,7 @@
 
   <script src="portfolio.js">
   </script>
+
 </body>
 
 </html>

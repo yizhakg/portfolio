@@ -7,10 +7,10 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation-fill-mode: both;
 animation: background-in 4s ease-in-out 3s both;
-background-color: #06060f;
+/* background-color: #06060f;
     background-image: url(img/desktop.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 .centerTextInDive{ 
   display: flex;
@@ -35,7 +35,7 @@ background-color: #06060f;
 }
  /* --------------- animation ------------------- */
 
- /* @keyframes focus-in {
+ @keyframes focus-in {
   0% {
     filter: blur(12px);
     opacity: 0;
@@ -168,7 +168,7 @@ background-color: #06060f;
     background-size: cover;
     background-position: center;
   }
-} */
+}
 
 /* --------------- gallery folder design ------------------- */
 .galleryFolder{
@@ -308,12 +308,12 @@ align-content: center;
   background-color: #1d2026d3;
   /* background-color: white; */
   height: 80vh;
-  width: 72vw;
+  width: 60vw;
   position: absolute;
   bottom: 40px;
   right: 0;
   display: none;
-  grid-template-columns:33.3% 33.3% 29% 4.3%;
+  grid-template-columns:60% 36% 2%;
 }
 
 /* .startClick>div{
@@ -328,7 +328,7 @@ padding: 10px;
 font-size: 1.3vw;
 }
 
-.box4{
+.box3{
   display: grid;
   grid-template-rows:8% auto 8% 8% 8% ;
   justify-content: center;
@@ -348,7 +348,7 @@ font-size: 1.3vw;
   padding: 2px 0;
   width: 100%;
   text-align: right;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -406,7 +406,9 @@ font-size: 1.3vw;
 #startMenuIcons{
   font-size: 1.3vw;
   color: white; 
+  transition: color .5s;
 }
+#startMenuIcons:last-child:hover{ color: cadetblue;}
 .flexWindows{ 
   display: flex;
   margin: 0;
@@ -453,5 +455,5 @@ font-size: 70%;
 
   #galleryFolderBar{display: none;}
   #resumeBar{display: none;}
-  #powerOff{transition: color .5s;}
-  #powerOff:hover{color:#F95738}
+  #powerButton{transition: color .5s}
+  #powerButton:hover{color:#F95738}

@@ -41,6 +41,7 @@ x.style.display = "unset";
 function galleryFolderBarOpen(){
   var x = document.getElementById("galleryFolderBar");
   x.style.display = "flex";
+  document.getElementById("galleryRecent").style.display = "flex";
 }
 function galleryFolderBarClose(){
   var x = document.getElementById("galleryFolderBar");
@@ -59,6 +60,7 @@ x.style.display = "unset";
 function resumeBarOpen(){
   var x = document.getElementById("resumeBar");
   x.style.display = "flex";
+  document.getElementById("resumeRecent").style.display = "flex";
 }
 
 function resumeBarClose(){
@@ -101,8 +103,9 @@ for(let i=1;i<=7;i++){
 z.insertAdjacentHTML("beforeend", images);
 // ------------------------------------
 
-function linkMe(link){
-  window.open(link);
+function linkMe(link,id){
+  window.open(link, "myWindow", "width=1000,height=1000");
+  document.getElementById(id).style.display = "flex";
 }
 //---------------------------------------
 dragElement(document.getElementById("galleryFolder"));
@@ -146,4 +149,9 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+//---------------------------------------
+function myFunction() {
+  document.getElementById("bin").classList.toggle("show");
 }
