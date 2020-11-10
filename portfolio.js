@@ -48,7 +48,7 @@ function galleryFolderBarClose(){
   var x = document.getElementById("galleryFolderBar");
   x.style.display = "none";
 }
-// -------------
+
 function resumeDisplay(){
   var x = document.getElementById("resume");
 if (x.style.display === "unset") {
@@ -68,7 +68,48 @@ function resumeBarClose(){
   var x = document.getElementById("resumeBar");
   x.style.display = "none";
 }
+function spotifyDisplay(){
+  var x = document.getElementById("spotify");
+if (x.style.display === "unset") {
+x.style.display = "none";
+} else {
+x.style.display = "unset";
+}
+}
 
+function spotifyBarOpen(){
+  var x = document.getElementById("spotifyBar");
+  x.style.display = "flex";
+  document.getElementById("spotifyRecent").style.display = "flex";
+}
+
+function spotifyBarClose(){
+  var x = document.getElementById("spotifyBar");
+  x.style.display = "none";
+}
+
+//--
+function facebookDisplay(){
+  var x = document.getElementById("facebook");
+if (x.style.display === "unset") {
+x.style.display = "none";
+} else {
+x.style.display = "unset";
+}
+}
+
+function facebookBarOpen(){
+  var x = document.getElementById("facebookBar");
+  x.style.display = "flex";
+  document.getElementById("facebookRecent").style.display = "flex";
+}
+
+function facebookBarClose(){
+  var x = document.getElementById("facebookBar");
+  x.style.display = "none";
+}
+
+// -------------
 function turnOffDissapear(){
   var x= document.getElementById("turnOff");
   x.style.display="none";
@@ -102,15 +143,12 @@ for(let i=1;i<=7;i++){
   images+=`<div><img src="img/squreimg/`+i+`.jpg" alt=""></div>`;
 }
 z.insertAdjacentHTML("beforeend", images);
-// ------------------------------------
 
-function linkMe(link,id){
-  window.open(link, "myWindow", "width=1000,height=1000");
-  document.getElementById(id).style.display = "flex";
-}
-//---------------------------------------
+//------------------dragWindows---------------------
 dragElement(document.getElementById("galleryFolder"));
 dragElement(document.getElementById("resume"));
+dragElement(document.getElementById("spotify"));
+dragElement(document.getElementById("facebook"));
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {

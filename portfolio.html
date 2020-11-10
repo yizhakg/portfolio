@@ -20,22 +20,22 @@
 
 <body>
   <!-- opening image -->
-    
-  <div>
+
+  <!-- <div>
     <img src="img/opening.jpg" alt="" class="opening">
-  </div>
+  </div> -->
 
   <!------main start------>
   <main>
 
-          <!----desktop icons---->
+    <!----desktop icons---->
     <div class="desktop">
 
       <div>
         <img src="icons/linkedin.png" alt="">
         <p>linkedin</p>
       </div>
-      <div ondblclick="linkMe(`http://www.facebook.com/yizhakg`,`facebookRecent`)">
+      <div ondblclick="facebookDisplay(),facebookBarOpen()">
         <img src="icons/facebook.png" alt="">
         <p>facebook</p>
       </div>
@@ -48,8 +48,8 @@
         <p>Resume</p>
       </div>
       <div>
-        <img src="icons/trash.png" alt="">
-        <p>recycle bin</p>
+        <img ondblclick="spotifyDisplay(),spotifyBarOpen()" src="icons/spotify.png" alt="">
+        <p>Spotify</p>
       </div>
       <div>
         <img src="icons/visual studio code.png" alt="">
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-          <!----gallery folder design---->
+    <!----gallery folder design---->
     <div id="galleryFolder" class="galleryFolder">
 
       <div class="closeflex">
@@ -71,19 +71,43 @@
       <img class="gallerybackground" src="img/gallery/gallery.png" alt="">
     </div>
 
-      <!----resume design---->
+    <!----resume design---->
     <div id="resume" class="resume">
-<div style="background-color: rgb(158, 156, 156);position: absolute;height: 23px;width: 800px;top: 0;"></div>
-      <div class="closeflex" >
+      <div class="closeBar" style="width: 800px;">Resume</div>
+      <div class="closeflex">
         <p onclick="resumeDisplay(),resumeBarClose()">x</p>
         <p>□</p>
         <p onclick="resumeDisplay()">-</p>
       </div>
-      <iframe src="https://drive.google.com/file/d/1Vfp_A8y4_Eck8feNIj0LeZhXMJs814SN/preview" width="800"
-        height="500"></iframe>
+      <iframe src="https://drive.google.com/file/d/1Vfp_A8y4_Eck8feNIj0LeZhXMJs814SN/preview" width="800" height="500"
+        style="position: relative;top: 23px;"></iframe>
+    </div>
+    <!----spotify Window---->
+    <div id="spotify">
+      <div class="closeBar" style="width: 500px;">spotify</div>
+      <div class="closeflex">
+        <p onclick="spotifyDisplay(),spotifyBarClose()">x</p>
+        <p>□</p>
+        <p onclick="spotifyDisplay()">-</p>
+      </div>
+      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcDoDDetPsEg" width="500" height="380"
+        frameborder="0" allowtransparency="true" allow="encrypted-media"
+        style="position: relative;top: 23px; "></iframe>
     </div>
 
-          <!---- start button click open---->
+    <!----facebook design---->
+    <div id="facebook" class="facebook">
+      <div class="closeBar" style="width: 800px;">Facebook</div>
+      <div class="closeflex">
+        <p onclick="facebookDisplay(),facebookBarClose()">x</p>
+        <p>□</p>
+        <p onclick="facebookDisplay()">-</p>
+      </div>
+      <iframe src="https://www.facebook.com/yizhakg" width="800" height="500"
+        style="position: relative;top: 23px;"></iframe>
+    </div>
+
+    <!---- start button click open---->
     <div id="startClick" class="startClick" onmouseover="startMenuApear()" onmouseout="startMenuDissapear()">
 
       <div class="clickMenuBox">
@@ -106,19 +130,19 @@
         <div class="centerTextInDive">
           <p>recently opend</p>
         </div>
-        <div id="resumeRecent" class="startClickMenu">
+        <div id="resumeRecent" class="startClickMenu" onclick="resumeDisplay()">
           <div class="centerTextInDive">
             <p>Resume</p>
           </div>
           <img src="icons/word.png" alt="word icon">
         </div>
-        <div id="vscRecent"class="startClickMenu">
+        <div id="vscRecent" class="startClickMenu">
           <div class="centerTextInDive">
             <p>Programming Knowledge</p>
           </div>
           <img src="icons/visual studio code.png" alt="visual studio code icon">
         </div>
-        <div id="galleryRecent" class="startClickMenu">
+        <div id="galleryRecent" class="startClickMenu" onclick="galleryFolderDisplay()">
           <div class="centerTextInDive">
             <p>Gallery</p>
           </div>
@@ -134,38 +158,46 @@
           <div class="centerTextInDive">
             <p>Facebook</p>
           </div>
-          <img src="icons/facebook.png" alt="linkedin icon">
+          <img src="icons/facebook.png" alt="facebook icon">
+        </div>
+        <div id="spotifyRecent" class="startClickMenu" onclick="spotifyDisplay()">
+          <div class="centerTextInDive">
+            <p>spotify</p>
+          </div>
+          <img src="icons/spotify.png" alt="spotify icon">
         </div>
       </div>
       <div class="box3">
         <div class="sideClickMenu"><i class="fas fa-bars"></i></div>
         <div></div>
-        <div onclick="galleryFolderDisplay(),galleryFolderBarOpen()" class="sideClickMenu"><i class="far fa-image"></i></div>
+        <div onclick="galleryFolderDisplay(),galleryFolderBarOpen()" class="sideClickMenu"><i class="far fa-image"></i>
+        </div>
         <div class="sideClickMenu"><i class="fas fa-cog"></i></div>
         <div id="powerButton" class="sideClickMenu" onclick="turnOffApear()"><i class="fas fa-power-off"></i></div>
       </div>
     </div>
 
-      <!----turnOff menu---->
+
+    <!----turnOff menu---->
     <div id="turnOff" class="turnOff" onmouseover="turnOffApear(),startMenuApear()" onmouseout="turnOffDissapear()">
       <div onclick="sleepApear(),startMenuDissapear()" class="shutDownHover"></div>
       <div onclick="powerOffApear()" class="shutDownHover"></div>
       <div onClick="window.location.reload()" class="shutDownHover"></div>
     </div>
 
-      <!----powerOff Window---->
+    <!----powerOff Window---->
     <div id="powerOff">
       <img src="img/shutdown/shutting-down.gif" alt="">
     </div>
 
-          <!----sleep Window---->
-<div id="sleep" onclick="sleepDissapear()">
-<div id="bigTime"></div>
-</div>
+    <!----sleep Window---->
+    <div id="sleep" onclick="sleepDissapear()">
+      <div id="bigTime"></div>
+    </div>
 
   </main>
 
-      <!---- Footer ( Start Menu bottom bar)---->
+  <!---- Footer ( Start Menu bottom bar)---->
   <footer class="startMenu">
     <div><img src="icons/message.png" alt="" class="openWindowIcon"></div>
     <div class="timeDate">
@@ -176,13 +208,18 @@
       <h5 style="font-weight: 300;">ENG</h5>
     </div>
     <section class="flexWindows">
-      <div id="resumeBar" class="openWindow" onclick="resumeDisplay()">resume<img class="openWindowIcon"
-          src="icons/word.png" alt="word icon"></div>
-      <div class="openWindow" style="display: none;">Programming Knowledge<img class="openWindowIcon" src="icons/visual studio code.png"
-          alt="visual studio code icon"></div>
-      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay()">Gallery<img
+      <div id="resumeBar" class="openWindow" onclick="resumeDisplay()" style="display: none;">Resume<img
+          class="openWindowIcon" src="icons/word.png" alt="word icon"></div>
+      <div class="openWindow" style="display: none;">Programming Knowledge<img class="openWindowIcon"
+          src="icons/visual studio code.png" alt="visual studio code icon"></div>
+      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay()" style="display: none;">Gallery<img
           class="openWindowIcon" src="icons/folder.png" alt="folder icon"></div>
-      <div class="openWindow" style="display: none;">yizhak gete<img class="openWindowIcon" src="icons/linkedin.png" alt="linkedin icon"></div>
+      <div class="openWindow" style="display: none;">Linkedin<img class="openWindowIcon" src="icons/linkedin.png"
+          alt="linkedin icon"></div>
+      <div id="spotifyBar" class="openWindow" onclick="spotifyDisplay()" style="display: none;">Spotify<img
+          class="openWindowIcon" src="icons/spotify.png" alt="spotify icon"></div>
+          <div id="facebookBar" class="openWindow" onclick="facebookDisplay()" style="display: none;">Facebook<img
+            class="openWindowIcon" src="icons/facebook.png" alt="facebook icon"></div>
     </section>
     <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
     <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows"></i></div>

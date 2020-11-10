@@ -7,10 +7,10 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation-fill-mode: both;
 animation: background-in 4s ease-in-out 3s both;
-/* background-color: #06060f;
+background-color: #06060f;
     background-image: url(img/desktop.jpg);
     background-size: cover;
-    background-position: center; */
+    background-position: center;
 }
 .centerTextInDive{ 
   display: flex;
@@ -34,7 +34,7 @@ animation: background-in 4s ease-in-out 3s both;
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s ease-in-out 3s both;
 }
  /* --------------- animation ------------------- */
-
+/*
  @keyframes focus-in {
   0% {
     filter: blur(12px);
@@ -169,20 +169,10 @@ animation: background-in 4s ease-in-out 3s both;
     background-position: center;
   }
 }
+*/
 
-/* --------------- gallery folder design ------------------- */
-.galleryFolder{
-  display: none;
-  position: absolute;
-  top:15vh;
-  right: 25vw;
-  height: 450px;
-  width: 700px;
-}
-.gallerybackground{
-  height: 100%;
-  width: 100%;
-}
+
+/* --------------- openclosebar ------------------- */
 .closeflex{
   display: flex;
   font-size: 80%;
@@ -191,7 +181,7 @@ animation: background-in 4s ease-in-out 3s both;
   justify-content: space-between;
   justify-items: center;
   align-items: center;
-  width: 10%;
+  width: auto;
   margin: 0;
   padding: 0;
 }
@@ -199,21 +189,65 @@ animation: background-in 4s ease-in-out 3s both;
 .closeflex p{
   margin: 0;
   padding: 3% 10%;
+  color: white;
+  height: 23px;
+  width: 23px;
 }
+.galleryFolder .closeflex p{ color: black;}
 .closeflex p:hover{
   color: white;
   background-color: rgba(204, 49, 21, 0.801);
   cursor: pointer;
 }
+.closeBar{
+  background-color: #1d2026c7;
+  position: absolute;
+  height: 23px;
+  top: 0;
+  text-align: center;
+  font-weight: 500;
+  color: white
+}
+
+iframe{ opacity: .98;}
+/* --------------- gallery folder design ------------------- */
+.galleryFolder{
+  display: none;
+  position: absolute;
+  top:15vh;
+  left: 25vw;
+  height: 450px;
+  width: 700px;
+}
+.gallerybackground{
+  height: 100%;
+  width: 100%;
+}
+
+
 /* --------------- resume Doc ------------------- */
 
 .resume{
   position: absolute;
   top:5vh;
-  right: 18vw;
+  left: 18vw;
   display: none;
 }
 
+/* --------------- spotify ------------------- */
+#spotify{
+position: absolute;
+left: 30%;
+top: 20%;
+display: none;
+}
+/* --------------- facebook ------------------- */
+#facebook{
+  position: absolute;
+  left: 20%;
+  top: 1%;
+  display: none;
+  }
 /* --------------- desktop icons ------------------- */
 
 .desktop{
@@ -268,6 +302,7 @@ background-color: #3d608a81;
   position: absolute;
   right: 0;
   bottom: 80px;
+  z-index: 1;
 }
 
 /* --------------- powerOffWindow ------------------- */
@@ -280,6 +315,7 @@ z-index: 1;
 display: none;
 justify-content: center;
 align-items: center;
+z-index: 2;
 } 
 /* --------------- sleepWindow ------------------- */
 #sleep{
@@ -314,6 +350,7 @@ align-content: center;
   right: 0;
   display: none;
   grid-template-columns:60% 36% 2%;
+  z-index: 1;
 }
 
 /* .startClick>div{
@@ -395,6 +432,7 @@ font-size: 1.3vw;
   grid-template-rows: 40px;
   justify-items: center;
   align-items: center;
+  z-index: 1;
 }
 .startMenu>div{
   display: flex;
@@ -452,8 +490,5 @@ font-size: 70%;
   }
   .timeDate h4{ margin: 0;  font-weight: 100;}
 
-
-  #galleryFolderBar{display: none;}
-  #resumeBar{display: none;}
   #powerButton{transition: color .5s}
   #powerButton:hover{color:#F95738}
