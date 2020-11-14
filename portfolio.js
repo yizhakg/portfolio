@@ -88,7 +88,6 @@ function spotifyBarClose(){
   x.style.display = "none";
 }
 
-//--
 function facebookDisplay(){
   var x = document.getElementById("facebook");
 if (x.style.display === "unset") {
@@ -108,7 +107,26 @@ function facebookBarClose(){
   var x = document.getElementById("facebookBar");
   x.style.display = "none";
 }
+//--
+function linkedinDisplay(){
+  var x = document.getElementById("linkedin");
+if (x.style.display === "unset") {
+x.style.display = "none";
+} else {
+x.style.display = "unset";
+}
+}
 
+function linkedinBarOpen(){
+  var x = document.getElementById("linkedinBar");
+  x.style.display = "flex";
+  document.getElementById("linkedinRecent").style.display = "flex";
+}
+
+function linkedinBarClose(){
+  var x = document.getElementById("linkedinBar");
+  x.style.display = "none";
+}
 // -------------
 function turnOffDissapear(){
   var x= document.getElementById("turnOff");
@@ -149,6 +167,7 @@ dragElement(document.getElementById("galleryFolder"));
 dragElement(document.getElementById("resume"));
 dragElement(document.getElementById("spotify"));
 dragElement(document.getElementById("facebook"));
+dragElement(document.getElementById("linkedin"));
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
@@ -191,6 +210,3 @@ function dragElement(elmnt) {
 }
 
 //---------------------------------------
-function myFunction() {
-  document.getElementById("bin").classList.toggle("show");
-}

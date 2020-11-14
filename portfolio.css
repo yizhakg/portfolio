@@ -241,8 +241,8 @@ left: 30%;
 top: 20%;
 display: none;
 }
-/* --------------- facebook ------------------- */
-#facebook{
+/* --------------- facebook + linkedin------------------- */
+#facebook,#linkedin{
   position: absolute;
   left: 20%;
   top: 1%;
