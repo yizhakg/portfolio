@@ -7,10 +7,10 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   animation-fill-mode: both;
 animation: background-in 4s ease-in-out 3s both;
-background-color: #06060f;
+/* background-color: #06060f;
     background-image: url(img/desktop.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 .centerTextInDive{ 
   display: flex;
@@ -34,7 +34,7 @@ background-color: #06060f;
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, flicker-out-1 2s ease-in-out 3s both;
 }
  /* --------------- animation ------------------- */
-/*
+
  @keyframes focus-in {
   0% {
     filter: blur(12px);
@@ -169,7 +169,7 @@ background-color: #06060f;
     background-position: center;
   }
 }
-*/
+
 
 
 /* --------------- openclosebar ------------------- */
@@ -244,10 +244,26 @@ display: none;
 /* --------------- facebook + linkedin------------------- */
 #facebook,#linkedin{
   position: absolute;
-  left: 20%;
   top: 1%;
   display: none;
   }
+  #facebook{left: 20vw;}
+  #linkedin{left: 40vw;}
+  /* --------------- SearchWindow ------------------- */
+#searchWindow{
+  position: absolute;
+  bottom: 40px;
+  right: 45px;
+  display: none;
+}
+#searchWindow>input{
+  width: 200px;
+  height:35px;
+  transition: height 2s;
+  text-align: center;
+
+}
+
 /* --------------- desktop icons ------------------- */
 
 .desktop{

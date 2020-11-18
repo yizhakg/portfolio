@@ -21,9 +21,9 @@
 <body>
   <!-- opening image -->
 
-  <!-- <div>
+  <div>
     <img src="img/opening.jpg" alt="" class="opening">
-  </div> -->
+  </div>
 
   <!------main start------>
   <main>
@@ -205,7 +205,13 @@
     <div id="sleep" onclick="sleepDissapear()">
       <div id="bigTime"></div>
     </div>
-
+    <!----SearchWindow---->
+    <div id="searchWindow">
+      <table>
+        <tr></tr>
+      </table>
+      <input type="text" placeholder="search">
+    </div>
   </main>
 
   <!---- Footer ( Start Menu bottom bar)---->
@@ -232,7 +238,7 @@
       <div id="facebookBar" class="openWindow" onclick="facebookDisplay()" style="display: none;">Facebook<img
           class="openWindowIcon" src="icons/facebook.png" alt="facebook icon"></div>
     </section>
-    <div><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
+    <div onclick="searchWindowDisplay()"><i id="startMenuIcons" class="fas fa-search" style="transform: rotatey(180deg);"></i></div>
     <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows"></i></div>
   </footer>
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>

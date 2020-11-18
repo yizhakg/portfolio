@@ -107,9 +107,10 @@ function facebookBarClose(){
   var x = document.getElementById("facebookBar");
   x.style.display = "none";
 }
-//--
+
 function linkedinDisplay(){
   var x = document.getElementById("linkedin");
+  document.getElementsByClassName("LI-title")[0].innerText="Follow Me :)"
 if (x.style.display === "unset") {
 x.style.display = "none";
 } else {
@@ -127,6 +128,16 @@ function linkedinBarClose(){
   var x = document.getElementById("linkedinBar");
   x.style.display = "none";
 }
+//--
+function searchWindowDisplay(){
+  var x = document.getElementById("searchWindow");
+if (x.style.display === "unset") {
+x.style.display = "none";
+} else {
+x.style.display = "unset";
+}
+}
+
 // -------------
 function turnOffDissapear(){
   var x= document.getElementById("turnOff");
@@ -209,4 +220,4 @@ function dragElement(elmnt) {
   }
 }
 
-//---------------------------------------
+//-----------------search----------------------
