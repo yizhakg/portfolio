@@ -21,9 +21,9 @@
 <body>
   <!-- opening image -->
 
-  <div>
+  <!-- <div>
     <img src="img/opening.jpg" alt="" class="opening">
-  </div>
+  </div> -->
 
   <!------main start------>
   <main>
@@ -53,7 +53,7 @@
       </div>
       <div>
         <img src="icons/visual studio code.png" alt="">
-        <p>Programming Knowledge</p>
+        <p>Code Skills</p>
       </div>
     </div>
 
@@ -120,9 +120,57 @@
           href='https://il.linkedin.com/in/yizhak-gete?trk=profile-badge'>Yizhak Gete</a></div>
     </div>
 
-    <!---- start button click open---->
+    <!---- start click menu ---->
     <div id="startClick" class="startClick" onmouseover="startMenuApear()" onmouseout="startMenuDissapear()">
-
+      <div class="box3">
+        <div class="sideClickMenu"><i class="fas fa-bars"></i></div>
+        <div></div>
+        <div onclick="galleryFolderDisplay(),galleryFolderBarOpen()" class="sideClickMenu"><i class="far fa-image"></i>
+        </div>
+        <div class="sideClickMenu"><i class="fas fa-cog"></i></div>
+        <div id="powerButton" class="sideClickMenu" onclick="turnOffApear()"><i class="fas fa-power-off"></i></div>
+      </div>
+      <div class="clickMenuBox">
+        <div class="centerTextInDive">
+          <p>recently opend</p>
+        </div>
+        <div id="resumeRecent" class="startClickMenu" onclick="resumeDisplay()">
+          <img src="icons/word.png" alt="word icon">
+          <div class="centerTextInDive">
+            <p>Resume</p>
+          </div>
+        </div>
+        <div id="vscRecent" class="startClickMenu">
+          <img src="icons/visual studio code.png" alt="visual studio code icon">
+          <div class="centerTextInDive">
+            <p>Code Skills</p>
+          </div>
+        </div>
+        <div id="galleryRecent" class="startClickMenu" onclick="galleryFolderDisplay()">
+          <img src="icons/folder.png" alt="folder icon">
+          <div class="centerTextInDive">
+            <p>Gallery</p>
+          </div>
+        </div>
+        <div id="linkedinRecent" class="startClickMenu" onclick="linkedinDisplay()">
+          <img src="icons/linkedin.png" alt="linkedin icon">
+          <div class="centerTextInDive">
+            <p>Linkedin</p>
+          </div>
+        </div>
+        <div id="facebookRecent" class="startClickMenu" onclick="facebookDisplay()">
+          <img src="icons/facebook.png" alt="facebook icon">
+          <div class="centerTextInDive">
+            <p>Facebook</p>
+          </div>
+        </div>
+        <div id="spotifyRecent" class="startClickMenu" onclick="spotifyDisplay()">
+          <img src="icons/spotify.png" alt="spotify icon">
+          <div class="centerTextInDive">
+            <p>spotify</p>
+          </div>
+        </div>
+      </div>
       <div class="clickMenuBox">
         <div class="centerTextInDive">
           <p>about me</p>
@@ -136,57 +184,7 @@
           <div><img src="img/squreimg/6.jpg" alt=""></div>
           <div><img src="img/squreimg/7.jpg" alt=""></div>
           <div></div>
-
         </div>
-      </div>
-      <div class="clickMenuBox">
-        <div class="centerTextInDive">
-          <p>recently opend</p>
-        </div>
-        <div id="resumeRecent" class="startClickMenu" onclick="resumeDisplay()">
-          <div class="centerTextInDive">
-            <p>Resume</p>
-          </div>
-          <img src="icons/word.png" alt="word icon">
-        </div>
-        <div id="vscRecent" class="startClickMenu">
-          <div class="centerTextInDive">
-            <p>Programming Knowledge</p>
-          </div>
-          <img src="icons/visual studio code.png" alt="visual studio code icon">
-        </div>
-        <div id="galleryRecent" class="startClickMenu" onclick="galleryFolderDisplay()">
-          <div class="centerTextInDive">
-            <p>Gallery</p>
-          </div>
-          <img src="icons/folder.png" alt="folder icon">
-        </div>
-        <div id="linkedinRecent" class="startClickMenu" onclick="linkedinDisplay()">
-          <div class="centerTextInDive">
-            <p>Linkedin</p>
-          </div>
-          <img src="icons/linkedin.png" alt="linkedin icon">
-        </div>
-        <div id="facebookRecent" class="startClickMenu" onclick="facebookDisplay()">
-          <div class="centerTextInDive">
-            <p>Facebook</p>
-          </div>
-          <img src="icons/facebook.png" alt="facebook icon">
-        </div>
-        <div id="spotifyRecent" class="startClickMenu" onclick="spotifyDisplay()">
-          <div class="centerTextInDive">
-            <p>spotify</p>
-          </div>
-          <img src="icons/spotify.png" alt="spotify icon">
-        </div>
-      </div>
-      <div class="box3">
-        <div class="sideClickMenu"><i class="fas fa-bars"></i></div>
-        <div></div>
-        <div onclick="galleryFolderDisplay(),galleryFolderBarOpen()" class="sideClickMenu"><i class="far fa-image"></i>
-        </div>
-        <div class="sideClickMenu"><i class="fas fa-cog"></i></div>
-        <div id="powerButton" class="sideClickMenu" onclick="turnOffApear()"><i class="fas fa-power-off"></i></div>
       </div>
     </div>
 
@@ -218,31 +216,31 @@
 
   <!---- Footer ( Start Menu bottom bar)---->
   <footer class="startMenu">
-    <div><img src="icons/message.png" alt="" class="openWindowIcon"></div>
+    <div class="startMenuIcons" onclick="startMenuDisplay()" > <i  class="fab fa-windows"></i> </div>
+    <div class="startMenuIcons" onclick="searchWindowDisplay()"><i class="fas fa-search"
+        style="transform: rotatey(180deg);"></i></div>
+    <section class="flexWindows">
+      <div id="resumeBar" class="openWindow" onclick="resumeDisplay()" style="display: none;"><img
+          class="openWindowIcon" src="icons/word.png" alt="word icon">Resume</div>
+      <div class="openWindow" style="display: none;"><img class="openWindowIcon" src="icons/visual studio code.png"
+          alt="visual studio code icon">Code Skills</div>
+      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay()" style="display: none;"><img
+          class="openWindowIcon" src="icons/folder.png" alt="folder icon">Gallery</div>
+      <div id="linkedinBar" class="openWindow" onclick="linkedinDisplay()" style="display: none;"><img
+          class="openWindowIcon" src="icons/linkedin.png" alt="linkedin icon">Linkedin</div>
+      <div id="spotifyBar" class="openWindow" onclick="spotifyDisplay()" style="display: none;"><img
+          class="openWindowIcon" src="icons/spotify.png" alt="spotify icon">Spotify</div>
+      <div id="facebookBar" class="openWindow" onclick="facebookDisplay()" style="display: none;"><img
+          class="openWindowIcon" src="icons/facebook.png" alt="facebook icon">Facebook</div>
+    </section>
+    <div>
+      <h5 style="font-weight: 300;">ENG</h5>
+    </div>
     <div class="timeDate">
       <h4 id="time"></h4>
       <h4 id="date"></h4>
     </div>
-    <div>
-      <h5 style="font-weight: 300;">ENG</h5>
-    </div>
-    <section class="flexWindows">
-      <div id="resumeBar" class="openWindow" onclick="resumeDisplay()" style="display: none;">Resume<img
-          class="openWindowIcon" src="icons/word.png" alt="word icon"></div>
-      <div class="openWindow" style="display: none;">Programming Knowledge<img class="openWindowIcon"
-          src="icons/visual studio code.png" alt="visual studio code icon"></div>
-      <div id="galleryFolderBar" class="openWindow" onclick="galleryFolderDisplay()" style="display: none;">Gallery<img
-          class="openWindowIcon" src="icons/folder.png" alt="folder icon"></div>
-      <div id="linkedinBar" class="openWindow" onclick="linkedinDisplay()" style="display: none;">Linkedin<img
-          class="openWindowIcon" src="icons/linkedin.png" alt="linkedin icon"></div>
-      <div id="spotifyBar" class="openWindow" onclick="spotifyDisplay()" style="display: none;">Spotify<img
-          class="openWindowIcon" src="icons/spotify.png" alt="spotify icon"></div>
-      <div id="facebookBar" class="openWindow" onclick="facebookDisplay()" style="display: none;">Facebook<img
-          class="openWindowIcon" src="icons/facebook.png" alt="facebook icon"></div>
-    </section>
-    <div onclick="searchWindowDisplay()"><i id="startMenuIcons" class="fas fa-search"
-        style="transform: rotatey(180deg);"></i></div>
-    <div onclick="startMenuDisplay()"><i id="startMenuIcons" class="fab fa-windows"></i></div>
+    <div><img src="icons/message.png" alt="" class="openWindowIcon"></div>
   </footer>
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
   <script src="portfolio.js"></script>
