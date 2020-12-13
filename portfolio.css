@@ -434,7 +434,7 @@ font-size: 1.3vw;
   cursor: pointer;
 }
 
-/* --------------- start menu ------------------- */
+/* --------------- start menu (footer)------------------- */
 
 .startMenu{
   animation: focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
